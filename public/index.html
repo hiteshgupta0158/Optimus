@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+
+<title>Prachi Kart</title>
+
+<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+     <link rel="stylesheet" type="text/css"
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+     
+  
+</head>
+ 	<script src="bower_components/jquery/dist/jquery.min.js"></script> 	
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+	
+    
+    <script type="text/javascript" src="bower_components/underscore/underscore-min.js"></script>
+    
+	<script src="static/js/app.js"></script>
+		<!-- Configurations Scripts -->
+	<script src="static/js/conf/config.js"></script>	
+	<!-- Directives Script -->
+	<!-- Services Scripts -->
+	<!-- Controller Scripts -->
+	<script src="static/js/controllers/main-controller.js"></script>
+	
+<body ng-app="zoombei" ng-controller="mainCtrl">
+
+	<div id="wrapper">
+ 	
+		<div ng-include="'views/common/header.html'"></div>
+	<!-- /. NAV TOP  -->
+		<div ng-include="'views/common/sidebar.html'"></div>
+	
+		<ng-view></ng-view>
+		
+		<div ng-include="'views/common/footer.html'"></div>
+      <!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    </div>
+    <!-- /. WRAPPER  -->
+</body>
+</html>
