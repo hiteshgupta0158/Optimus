@@ -1,0 +1,92 @@
+    
+    <div id="page-wrapper">
+        <div id="page-inner">
+            <div class="row">
+                <div class="col-lg-12" style="border-bottom:solid; border-bottom-width:1px; border-color:#e5e5e5" >
+                    <div class="row"><h4>Welcome Optuimus</h4></div>
+                </div>
+                <br />
+                <!--<div class="row">
+                    <div class="col-lg-3 col-md-2">
+                        <input type="text" ng-model="Country" class="form-control" style="width:200px; " />
+                    </div>
+                    <div class="col-lg-3 col-md-2">
+                        <input type ="button" ng-click="SearchWeather()" class="btn btn-primary" value="Get Weather Info" style="width:150px;" />
+                    </div>
+                   <div class="col-lg-2 col-md-2">
+                        <input type ="button" ng-click="open()" class="btn btn-primary" value="open" style="width:100px;" />
+                    </div>
+                </div>-->
+                <div class="row" ng-if="objWeather!=undefined">
+                    <div class="row">
+                        <!--<pre>{{objWeather}}</pre>-->
+                        <div class="clsTemprature col-lg-4 col-md-6 col-sm-12">
+                            Weather in {{objWeather.name}}, {{objWeather.sys.country}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="clsTemprature  col-lg-4 col-md-6 col-sm-12">
+                            <img ng-src="{{WeatherIcon}}"/> 
+                            {{Temprature}} &#8451
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div style="margin-left:15px;" class="col-lg-4 col-md-6 col-sm-12">
+                            <strong>Get at :</strong> {{unixToTimeString(objWeather.dt)}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div style="margin-left:15px;" class="col-lg-4 col-md-6 col-sm-12"><strong>{{objWeather.weather[0].description}}</strong></div>
+                    </div>
+                    <div class ="row">
+                        <table class="col-lg-6 col-md-6 col-sm-12 tblWeather">
+                            <tr>
+                                <td>Minimum Temprature</td>
+                                <td>{{objWeather.main.temp_min}} &#8451</td>
+                            </tr>
+                            <tr>
+                                <td>Maximum Temprature</td>
+                                <td>{{objWeather.main.temp_max}} &#8451</td>
+                            </tr>
+                            <tr>
+                                <td>Wind</td>
+                                <td>{{objWeather.wind.speed}} m/s<br /> {{objWeather.wind.deg}}</td>
+                            </tr>
+                            <tr>
+                                <td>Cloudiness</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Pressure</td>
+                                <td>{{objWeather.main.pressure}}</td>
+                            </tr>
+                            <tr>
+                                <td>Humidity</td>
+                                <td>{{objWeather.main.humidity}}</td>
+                            </tr>
+                            <tr>
+                                <td>Sunrise</td>
+                                <td>{{unixToTimeString(objWeather.sys.sunrise)}}</td>
+                            </tr>
+                            <tr>
+                                <td>Sunset</td>
+                                <td>{{unixToTimeString(objWeather.sys.sunset)}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>coords</td>
+                                <td>
+                                   latitude : {{objWeather.coord.lat}} , longitude: {{objWeather.coord.lon}}
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- /. ROW  -->
+            <hr />
+        </div>
+        <!-- /. PAGE INNER  -->
+    </div>
+    <!-- /. PAGE WRAPPER  --> 
+<!--  -->

@@ -1,0 +1,25 @@
+﻿<form name="frmUserForm">
+    <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">Please provide your Country and Pincode</h3>
+    </div>
+    <div class="modal-body" id="modal-body">
+        <div class="row">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <label class="col-lg-4">Enter your country </label>  
+                    <input type="text" id="txtCountry" class="form-control col-lg-8" ng-model="Country" ng-required="Pincode ==''"  style="width:200px;"/>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <label class="col-lg-4">Enter your pincode </label> 
+                    <input type="text" id="txtPincode" class="form-control  col-lg-8" ng-model="Pincode"  ng-required="Country ==''" style="width:200px;"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-warning" type="submit" ng-click="frmUserForm.$valid && submit()">Submit</button>
+    </div>
+</form>
